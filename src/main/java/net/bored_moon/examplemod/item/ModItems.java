@@ -1,7 +1,6 @@
-package net.bored_moon.examplemod;
+package net.bored_moon.examplemod.item;
 
 import net.bored_moon.examplemod.ExampleMod;
-
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,13 +12,11 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MOD_ID);
 
-    public static final RegistryObject<Item> FireGem = ITEMS.register("fire_gem",
+    public static final RegistryObject<Item> FIRE_GEM = ITEMS.register("fire_gem",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC )));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-
-
 
 }

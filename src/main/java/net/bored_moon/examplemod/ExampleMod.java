@@ -1,6 +1,7 @@
 package net.bored_moon.examplemod;
 
 import com.mojang.logging.LogUtils;
+import net.bored_moon.examplemod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,11 +15,8 @@ import org.slf4j.Logger;
 @Mod(ExampleMod.MOD_ID)
 public class ExampleMod
 {
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "examplemod";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
     public ExampleMod()
     {
