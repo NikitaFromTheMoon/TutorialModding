@@ -1,5 +1,5 @@
 {
 	"item.examplemod.fire_gem": "Камень огня",
 	"itemGroup.fire_tab": "Вкладка огня",
-	"block.examplemod": "Руда огненного камня"
+	"block.examplemod.fire_gem_ore": "Руда огненного камня"
 }
