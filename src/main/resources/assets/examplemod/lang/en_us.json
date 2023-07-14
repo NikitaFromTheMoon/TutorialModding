@@ -1,3 +1,5 @@
 {
-  "item.examplemod.fire_gem": "Fire gem"
+  "item.examplemod.fire_gem": "Fire gem",
+  "itemGroup.fire_tab": "Fire tab",
+  "block.examplemod": "Fire gem ore"
 }

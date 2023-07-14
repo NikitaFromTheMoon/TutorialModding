@@ -1,6 +1,7 @@
 package net.bored_moon.examplemod;
 
 import com.mojang.logging.LogUtils;
+import net.bored_moon.examplemod.block.ModBlocks;
 import net.bored_moon.examplemod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,7 @@ public class ExampleMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
