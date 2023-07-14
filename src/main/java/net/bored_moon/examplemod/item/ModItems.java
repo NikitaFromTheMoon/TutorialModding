@@ -13,9 +13,10 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MOD_ID);
 
     public static final RegistryObject<Item> FIRE_GEM = ITEMS.register("fire_gem",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC )));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FIRE_TAB)));
 
     public static void register(IEventBus eventBus) {
+
         ITEMS.register(eventBus);
     }
 
