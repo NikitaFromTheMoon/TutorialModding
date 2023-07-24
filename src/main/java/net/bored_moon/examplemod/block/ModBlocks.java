@@ -1,6 +1,7 @@
 package net.bored_moon.examplemod.block;
 
 import net.bored_moon.examplemod.ExampleMod;
+import net.bored_moon.examplemod.block.custom.GovnoBlock;
 import net.bored_moon.examplemod.item.ModCreativeModeTab;
 import net.bored_moon.examplemod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -28,8 +29,13 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FIRE_GEM_ORE = registerBlock("fire_gem_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2.5f).requiresCorrectToolForDrops(),
+                    .strength(8).requiresCorrectToolForDrops().explosionResistance(10000),
                     UniformInt.of(3, 7)), ModCreativeModeTab.FIRE_TAB);
+
+    public static final RegistryObject<Block> GOVNO = registerBlock("govno",
+            () -> new GovnoBlock(BlockBehaviour.Properties.of(Material.DIRT)
+                    .strength(1)), ModCreativeModeTab.FIRE_TAB);
+
 //    public static final RegistryObject<Block> FIRE_GEM_ORE = registerBlock("fire_gem_ore",
 //            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
 //                    .strength(2.5f).requiresCorrectToolForDrops(), ModCreativeModeTab.FIRE_TAB);

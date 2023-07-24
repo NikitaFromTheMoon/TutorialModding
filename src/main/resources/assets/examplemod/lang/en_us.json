@@ -1,5 +1,9 @@
 {
   "item.examplemod.fire_gem": "Fire gem",
+  "item.examplemod.shapka": "Shapka",
+
   "itemGroup.fire_tab": "Fire tab",
-  "block.examplemod.fire_gem_ore": "Fire gem ore"
+
+  "block.examplemod.fire_gem_ore": "Fire gem ore",
+  "block.examplemod.govno": "Poop"
 }
