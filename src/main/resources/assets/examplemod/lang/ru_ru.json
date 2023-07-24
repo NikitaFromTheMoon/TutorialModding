@@ -1,5 +1,9 @@
 {
 	"item.examplemod.fire_gem": "Камень огня",
+	"item.examplemod.shapka": "Шапка",
+
 	"itemGroup.fire_tab": "Вкладка огня",
-	"block.examplemod.fire_gem_ore": "Руда огненного камня"
+
+	"block.examplemod.fire_gem_ore": "Руда огненного камня",
+	"block.examplemod.govno": "Говно"
 }
