@@ -5,5 +5,6 @@
   "itemGroup.fire_tab": "Fire tab",
 
   "block.examplemod.fire_gem_ore": "Fire gem ore",
-  "block.examplemod.govno": "Poop"
+  "block.examplemod.govno": "Poop",
+  "block.examplemod.fire_gem_block": "Fire gem block"
 }

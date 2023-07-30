@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#$#",
-    "$$$",
-    "#$#"
+    "ѣѲѣ",
+    "ѲѲѲ",
+    "ѣѲѣ"
   ],
   "key": {
-    "#": {
+    "ѣ": {
       "item": "minecraft:diamond"},
 
-    "$": {
+    "Ѳ": {
       "item": "minecraft:lava_bucket"
     }
   },

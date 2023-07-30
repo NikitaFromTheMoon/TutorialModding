@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "lit=false": { "model": "examplemod:block/fire_gem_block_decay"},
+    "lit=true": { "model": "examplemod:block/fire_gem_block_smoldering"}
+
+  }
+}
