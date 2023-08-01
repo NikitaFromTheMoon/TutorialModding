@@ -3,6 +3,8 @@ package net.bored_moon.examplemod;
 import com.mojang.logging.LogUtils;
 import net.bored_moon.examplemod.block.ModBlocks;
 import net.bored_moon.examplemod.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -39,6 +41,8 @@ public class ExampleMod
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {}
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.FIREBERRY_BUSH.get(), RenderType.cutout());
+        }
     }
 }

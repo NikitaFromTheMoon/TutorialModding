@@ -1,6 +1,7 @@
 package net.bored_moon.examplemod.block;
 
 import net.bored_moon.examplemod.ExampleMod;
+import net.bored_moon.examplemod.block.custom.FireBerryCropBlock;
 import net.bored_moon.examplemod.block.custom.FireGemBlock;
 import net.bored_moon.examplemod.block.custom.GovnoBlock;
 import net.bored_moon.examplemod.item.ModCreativeModeTab;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -39,6 +41,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> GOVNO = registerBlock("govno",
             () -> new GovnoBlock(BlockBehaviour.Properties.of(Material.DIRT)
                     .strength(1)), ModCreativeModeTab.FIRE_TAB);
+
+    public static final RegistryObject<Block> FIREBERRY_BUSH = BLOCKS.register("fireberry_bush",
+            () -> new FireBerryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
     //Block and block item registration methods
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
