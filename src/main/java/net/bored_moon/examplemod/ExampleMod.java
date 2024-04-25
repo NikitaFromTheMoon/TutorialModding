@@ -2,7 +2,17 @@ package net.bored_moon.examplemod;
 
 import com.mojang.logging.LogUtils;
 import net.bored_moon.examplemod.block.ModBlocks;
+import net.bored_moon.examplemod.block.custom.entity.ModBlockEntities;
+import net.bored_moon.examplemod.fluid.ModFluidTypes;
+import net.bored_moon.examplemod.fluid.ModFluids;
 import net.bored_moon.examplemod.item.ModItems;
+import net.bored_moon.examplemod.networking.ModMessages;
+import net.bored_moon.examplemod.screeen.IdolScreen;
+import net.bored_moon.examplemod.screeen.ModMenuTypes;
+import net.bored_moon.examplemod.villager.ModVillagers;
+import net.bored_moon.examplemod.world.feature.ModConfiguredFeatures;
+import net.bored_moon.examplemod.world.feature.ModPlacedFeatures;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +37,17 @@ public class ExampleMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModVillagers.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
+
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -35,6 +56,11 @@ public class ExampleMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
+
+        ModMessages.register();
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -42,7 +68,10 @@ public class ExampleMod
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.FIREBERRY_BUSH.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_FLUID_WATER.get(), RenderType.translucent());
+
+            MenuScreens.register(ModMenuTypes.IDOL_MENU.get(), IdolScreen::new);
         }
     }
 }

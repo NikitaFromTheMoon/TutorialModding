@@ -4,6 +4,8 @@ import net.bored_moon.examplemod.ExampleMod;
 import net.bored_moon.examplemod.block.custom.FireBerryCropBlock;
 import net.bored_moon.examplemod.block.custom.FireGemBlock;
 import net.bored_moon.examplemod.block.custom.GovnoBlock;
+import net.bored_moon.examplemod.block.custom.IdolBlock;
+import net.bored_moon.examplemod.fluid.ModFluids;
 import net.bored_moon.examplemod.item.ModCreativeModeTab;
 import net.bored_moon.examplemod.item.ModItems;
 
@@ -11,9 +13,7 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 
@@ -41,6 +41,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> GOVNO = registerBlock("govno",
             () -> new GovnoBlock(BlockBehaviour.Properties.of(Material.DIRT)
                     .strength(1)), ModCreativeModeTab.FIRE_TAB);
+
+    public static final RegistryObject<Block> YREMON_IDOL = registerBlock("yremon_idol",
+            () -> new IdolBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(1.5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.FIRE_TAB);
+
+    public static final RegistryObject<LiquidBlock> SOAP_WATER_BLOCK = BLOCKS.register("soap_water_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_SOAP_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     public static final RegistryObject<Block> FIREBERRY_BUSH = BLOCKS.register("fireberry_bush",
             () -> new FireBerryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));

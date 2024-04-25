@@ -2,10 +2,24 @@
 	"item.examplemod.fire_gem": "Камень огня",
 	"item.examplemod.shapka": "Шапка",
 	"item.examplemod.fireberries": "Огневика",
+	"item.examplemod.kvass": "Квас",
+	"item.examplemod.cross": "Крест",
+	"item.examplemod.soap_water_bucket": "Мыльное ведро",
+	"item.examplemod.chaos_blade": "Меч хаоса",
 
 	"itemGroup.fire_tab": "Вкладка огня",
 
 	"block.examplemod.fire_gem_ore": "Руда огненного камня",
 	"block.examplemod.govno": "Говно",
-	"block.examplemod.fire_gem_block": "Блок огненного камня"
+	"block.examplemod.fire_gem_block": "Блок огненного камня",
+	"block.examplemod.yremon_idol": "Идол Иремона",
+
+	"key.examplemod.madness_level.low": "Ты ещё не безумен",
+
+	"key.category.examplemod.madness": "Безумие",
+
+	"key.examplemod.madness_level": "Проверка уровня безумия",
+
+	"entity.minecraft.villager.examplemod.fire_rune_maker": "Выжигатель огненных рун"
+
 }

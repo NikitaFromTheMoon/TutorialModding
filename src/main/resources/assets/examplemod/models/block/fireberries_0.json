@@ -2,5 +2,6 @@
   "parent": "minecraft:block/crop",
   "textures": {
     "crop": "examplemod:block/fireberries"
-  }
+  },
+  "render_type": "cutout"
 }

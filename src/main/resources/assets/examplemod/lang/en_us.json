@@ -2,10 +2,23 @@
   "item.examplemod.fire_gem": "Fire gem",
   "item.examplemod.shapka": "Shapka",
   "item.examplemod.fireberries": "Fireberries",
+  "item.examplemod.kvass": "Kvass",
+  "item.examplemod.cross": "Cross",
+  "item.examplemod.soap_water_bucket": "Soapy bucket",
+  "item.examplemod.chaos_blade": "Chaos blade",
 
   "itemGroup.fire_tab": "Fire tab",
 
   "block.examplemod.fire_gem_ore": "Fire gem ore",
   "block.examplemod.govno": "Poop",
-  "block.examplemod.fire_gem_block": "Fire gem block"
+  "block.examplemod.fire_gem_block": "Fire gem block",
+  "block.examplemod.yremon_idol": "Yremon's idol",
+
+  "key.examplemod.madness_level.low": "You aren't mad yet",
+
+  "key.category.examplemod.madness": "Madness",
+
+  "key.examplemod.madness_level": "Madness level checking",
+
+  "entity.minecraft.villager.examplemod.fire_rune_maker": "Fire rune scorcher"
 }
